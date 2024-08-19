@@ -158,6 +158,11 @@ function sumScore(result, choice, challengerChoice) {
 }
 
 function showStats() {
+  if (wins > loss) {
+    console.log("\nVOCE GANHOU ! :D\n");
+  } else {
+    console.log("\nVOCÊ PERDEU! :(\n");
+  }
   const totalGames = wins + loss + draw;
   const winsPercentage = totalGames
     ? ((wins / totalGames) * 100).toFixed(2)
@@ -187,7 +192,7 @@ function showHistory() {
   console.log("\nHistórico das partidas:");
   matchHistory.forEach((round) => {
     console.log(
-      `\nRodada ${round.round}: (Você) ${round.playerChoice} x ${round.challengerChoice} (Desafiante) - ${round.result}\n`
+      `\nRodada ${round.round}: (Você) ${round.playerChoice} x ${round.challengerChoice} (Adversário) - ${round.result}\n`
     );
   });
 }
