@@ -1,3 +1,5 @@
+//Escolhi javascript por ter mais experiência nesta linguagem.
+
 const readline = require("readline");
 const choices = ["Pedra", "Papel", "Tesoura"].map((choice) =>
   choice.toLowerCase()
